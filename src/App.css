@@ -120,6 +120,10 @@ footer > p {
   width: 85%;
 }
 
+.bob {
+  background-color: grey;
+}
+
 .hidden {
   display: none;
 }
