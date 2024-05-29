@@ -1,38 +1,186 @@
-.App {
+.title {
+  background-color: blueviolet;
+  background: linear-gradient(to right,red 5%, orange 20%, yellow 35%, green 50%, dodgerblue 65%, indigo 80%, violet 95%);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 1rem;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section > h2 {
+  margin-bottom: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section > p {
+  margin-top: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.comments {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow-x: auto;
+}
+
+#positive {
+  background-color: #b2d8b2;
+  border: 1px solid green;
+}
+
+#pride {
+  background-color: #eaccf1;
+  border: 1px solid mediumorchid;
+}
+
+#archive {
+  background-color: #bbddff;
+  border: 1px solid dodgerblue;
+}
+
+button, input[type="submit"] {
+  align-self: center;
+  background: green;
+  border: 1px solid white;
+  border-radius: .3125rem;
+  box-shadow: 2px 2px 5px black;
   color: white;
+  font-family: 'Grandstander', 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  padding: .625rem;
+  text-align: center;
+  width: 6.25rem;
 }
 
-.App-link {
-  color: #61dafb;
+article {
+  background: lightgoldenrodyellow;
+  border-radius: .125rem;
+  box-shadow: 2px 2px 5px black;
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  font-size: small;
+  height: max-content;
+  margin: 0.5rem;
+  min-height: min-content;
+  padding: 0 0.5rem;
+  text-align: left;
+  width: 38%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+article > h3 {
+  margin-bottom: 0.25rem;
+}
+
+article > p {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.signature {
+  font-style: italic;
+}
+
+footer > p {
+  font-size: smaller;
+  text-align: center;
+}
+
+.commentform {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid grey;
+  border-radius: .5rem;
+  display: flex;
+  flex-basis: content;
+  flex-direction: column;
+  font-family: 'Grandstander', 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  margin: auto;
+  padding: .5rem;
+  position: fixed;
+  top: 30%;
+  left: 5%;
+  visibility: hidden;
+  width: 85%;
+}
+
+.hidden {
+  display: none;
+}
+
+label {
+  margin: auto;
+  padding: .5rem;
+  width: 75%;
+}
+
+input[type="text"], textarea, input[type="submit"] {
+  background-color: #e7f5fe;
+  border: 1px solid grey;
+  border-radius: .33rem;
+  margin: 0.25rem auto;
+  width: 95%;
+}
+
+@media screen and (min-width: 480px) {
+  .commentform {
+    top: 5%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 600px) {
+  .commentform {
+    top: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  section {
+    justify-content: flex-start;
+    margin-right: 1%;
+    min-height: 75vh;
+    text-align: center;
+    width: 30vw;
+  }
+
+  #positive {
+    flex: 2 1 0;
+    margin-left: 1%;
+  }
+
+  #pride {
+    flex: 2 1 0;
+  }
+
+  #archive {
+    flex: 1 1 0;
+  }
+
+  .commentform, .prideform {
+    top: 33%;
+    left: 33%;
+    width: 33%;
   }
 }
