@@ -34,7 +34,6 @@ section > p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 75vh;
   justify-content: space-evenly;
   overflow: auto;
 }
