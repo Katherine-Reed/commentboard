@@ -34,8 +34,9 @@ section > p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  height: 75vh;
   justify-content: space-evenly;
-  overflow-x: auto;
+  overflow: auto;
 }
 
 #positive {
@@ -71,7 +72,7 @@ button, input[type="submit"] {
 
 article {
   background: lightgoldenrodyellow;
-  border-radius: .125rem;
+  border-radius: .33rem;
   box-shadow: 2px 2px 5px black;
   display: flex;
   flex-basis: auto;
@@ -82,7 +83,7 @@ article {
   min-height: min-content;
   padding: 0 0.5rem;
   text-align: left;
-  width: 38%;
+  width: 80%;
 }
 
 article > h3 {
@@ -120,10 +121,6 @@ footer > p {
   width: 85%;
 }
 
-.bob {
-  background-color: grey;
-}
-
 .hidden {
   display: none;
 }
@@ -145,6 +142,14 @@ input[type="text"], textarea, input[type="submit"] {
 @media screen and (min-width: 480px) {
   .commentform {
     top: 5%;
+  }
+
+  article {
+    width: 38%;
+  }
+
+  .archived {
+    width: 80%;
   }
 }
 

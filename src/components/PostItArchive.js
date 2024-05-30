@@ -16,9 +16,9 @@ export default function PostItArchive() {
 	return (
 		<>
 			{archivePosts.map((archive) => (
-				<article key={archive.id}>
+				<article className="archived" key={archive.id}>
 					<h3>{archive.archivesession}</h3>
-					<a href={archive.archivelink} target="_blank" rel="noreferrer">{archive.archivelink}</a>
+					<a href={archive.archivelink} target="_blank" rel="noreferrer">Read post</a>
 				</article>
 			))}
 		</>
