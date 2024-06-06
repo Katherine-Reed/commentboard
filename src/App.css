@@ -1,14 +1,46 @@
 .title {
-  background-color: blueviolet;
+  align-items: center;
+  background-color: #081351;
   background: linear-gradient(to right,red 5%, orange 20%, yellow 35%, green 50%, dodgerblue 65%, indigo 80%, violet 95%);
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  padding: .5rem;
   text-align: center;
   text-shadow: 2px 2px 5px black;
+}
+
+.rinp-logo {
+  height: 5rem;
+  width: 5rem;
+}
+
+#desktop {
+  height: 1px;
+  visibility: hidden;
+}
+
+a {
+  color: #1e1ef0;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #a00a55;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1e1ef0;
+  text-decoration: none;
 }
 
 #content {
   display: flex;
   flex-direction: column;
+  height: 80vh;
 }
 
 section {
@@ -39,27 +71,28 @@ section > p {
 }
 
 #positive {
-  background-color: #b2d8b2;
-  border: 1px solid green;
+  background-color: #ffd1b3;
+  border: 1px solid #ff6400;;
 }
 
 #pride {
-  background-color: #eaccf1;
-  border: 1px solid mediumorchid;
+  background-color: #e1d9f2;
+  border: 1px solid #7855c3;
 }
 
 #archive {
-  background-color: #bbddff;
-  border: 1px solid dodgerblue;
+  background-color: #d5f1f6;
+  border: 1px solid #6fcfe1;
 }
 
 button, input[type="submit"] {
   align-self: center;
-  background: green;
+  background: #081351;
   border: 1px solid white;
   border-radius: .3125rem;
   box-shadow: 2px 2px 5px black;
   color: white;
+  cursor: pointer;
   font-family: 'Grandstander', 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
     'Arial', sans-serif;
   font-weight: bold;
@@ -67,6 +100,11 @@ button, input[type="submit"] {
   padding: .625rem;
   text-align: center;
   width: 6.25rem;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #a00a55;
+  box-shadow: inset 2px 2px 2px black;
 }
 
 article {
@@ -156,6 +194,15 @@ input[type="text"], textarea, input[type="submit"] {
   .commentform {
     top: 30%;
   }
+
+  .title {
+    flex-direction: row;
+  }
+
+  #desktop {
+    height: 5rem;
+    visibility: visible;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -171,6 +218,14 @@ input[type="text"], textarea, input[type="submit"] {
     min-height: 75vh;
     text-align: center;
     width: 30vw;
+  }
+
+  #content {
+    height: 80vh;
+  }
+
+  .comments {
+    max-height: 80%;
   }
 
   #positive {
