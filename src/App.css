@@ -72,17 +72,17 @@ section > p {
 
 #positive {
   background-color: #ffd1b3;
-  border: 1px solid #ff6400;;
+  border: 0.125rem solid #ff6400;;
 }
 
 #pride {
   background-color: #e1d9f2;
-  border: 1px solid #7855c3;
+  border: 0.125rem solid #7855c3;
 }
 
 #archive {
   background-color: #d5f1f6;
-  border: 1px solid #6fcfe1;
+  border: 0.125rem solid #6fcfe1;
 }
 
 button, input[type="submit"] {
@@ -137,6 +137,7 @@ article > p {
 }
 
 footer > p {
+  display: block;
   font-size: smaller;
   text-align: center;
 }
